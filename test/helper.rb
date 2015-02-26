@@ -2,6 +2,7 @@ ENV['RAILS_ENV'] ||= 'test'
 
 require 'rubygems'
 require 'bundler'
+require 'protected_attributes'
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
