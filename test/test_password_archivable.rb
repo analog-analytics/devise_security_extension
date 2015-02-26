@@ -9,6 +9,12 @@ class TestPasswordArchivable < ActiveSupport::TestCase
     Devise.password_archiving_count = 1
   end
 
+  test 'show allow mass assigment of some attributes' do
+    accessible = OldPassword.accessible_attributes
+    assert accessible.include?('password_salt')
+    assert accessible.include?('encrypted_password')
+  end
+
   test "should respect maximum attempts configuration" do
     user = User.new
     user.password = 'password1'

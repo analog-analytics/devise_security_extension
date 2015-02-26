@@ -4,3 +4,4 @@ gemspec
 # Example:
 gem "rails", ">= 3.1.1"
 gem "devise", ">= 2.0.0"
+gem 'protected_attributes'
